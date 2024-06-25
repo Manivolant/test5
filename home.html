@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home - MvV</title>
+    <style>
+        body{
+            overflow-x: hidden;
+        }
+        .my-nav-b{
+            height: 0px;
+            opacity: 0;
+            transition: all ease 0.4s;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+
+
+
+
+    <!-- header -->
+    <section class="navbar bg-dark container-fluid">
+        <span class="navbar-bradn text-light user-select-none">MvV</span>
+        <div class="navbar-nav d-none d-md-block">
+            <a href="./home.html" class="text-light px-2 text-decoration-none fade show">Home</a>
+            <a href="./buy.html" class="text-secondary px-2 text-decoration-none fade show">Buy</a>
+            <a href="./plans.html" class="text-secondary px-2 text-decoration-none fade show">MvV+</a>
+        </div>
+        <div id="navbar-btn" class="position-relative d-block d-md-none btn btn-secondary"><span class="text-dark h5">+</span></div>
+    </section>
+    <div class="my-nav-b bg-dark d-flex text-wrap row justify-content-between border-top border-secondary">
+        <a href="./home.html" class="col-12 text-center d-flex align-items-center justify-content-center h6 text-decoration-none text-secondary shadow-sm">Home</a>
+        <a href="./buy.html" class="col-12 text-center d-flex align-items-center justify-content-center h6 text-decoration-none text-secondary shadow-sm">Buy</a>
+        <a href="./plans.html" class="col-12 text-center d-flex align-items-center justify-content-center h6 text-decoration-none text-secondary shadow-sm">MvV+</a>
+    </div>
+    <!-- header -->
+
+
+
+    <section class="container-fluid d-flex justify-content-end py-5">
+        <div class="container-lg row">
+            <div class="col-12 row col-md-6 p-3">
+                <span class="display-4 text-nowrap col-12 d-block d-md-flex  align-items-end text-center txet-md-start">MvV Watchs</span>
+                <span class="lead col-12 text-wrap d-block text-center txet-md-start">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, quas.</span>
+            </div>
+            <div class="col-12 d-flex justify-content-center justify-content-md-end col-md-6 p-5">
+                <img style="width: 70%;" class="img-fluid" src="./img/watch1.png">
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+<div id="d" class="carousel slide" data-ride="carousel" data-interval="2000">
+    <ol class="carousel-indicators">
+        <li data-target="#d" data-slide-to="0" class="active"></li>
+        <li data-target="#d" data-slide-to="1"></li>
+        <li data-target="#d" data-slide-to="2"></li>
+        <li data-target="#d" data-slide-to="3"></li>
+        <li data-target="#d" data-slide-to="4"></li>
+        <li data-target="#d" data-slide-to="5"></li>
+        <li data-target="#d" data-slide-to="6"></li>
+        <li data-target="#d" data-slide-to="7"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div style="transition: all ease 0.3s;" class="carousel-item active">
+            <img class="d-block w-100" src="./img/apple1.jpg" alt="First slide">
+            <div class="carousel-caption d-none d-md-block">
+                <span class="display-2">MvV Watch's</span>
+                <p class="display-6">best theme and color's</p>
+            </div>
+        </div>
+        <div style="transition: all ease 0.3s;" class="carousel-item">
+            <img class="d-block w-100" src="./img/apple2.jpg" alt="Second slide">
+            <div class="carousel-caption d-none d-md-block">
+                <span class="display-2">MvV</span>
+                <p class="display-6">best quality</p>
+            </div>
+        </div>
+        <div style="transition: all ease 0.3s;" class="carousel-item">
+            <img class="d-block w-100" src="./img/apple3.jpg" alt="Second slide">
+        </div>
+        <div style="transition: all ease 0.3s;" class="carousel-item">
+            <img class="d-block w-100" src="./img/apple4.jpg" alt="Second slide"> 
+        </div>
+        <div style="transition: all ease 0.3s;" class="carousel-item">
+            <img class="d-block w-100" src="./img/apple5.jpg" alt="Second slide">
+        </div>
+        <div style="transition: all ease 0.3s;" class="carousel-item">
+            <img class="d-block w-100" src="./img/apple6.jpg" alt="Second slide">
+        </div>
+        <div style="transition: all ease 0.3s;" class="carousel-item">
+            <img class="d-block w-100" src="./img/apple7.jpg" alt="Second slide">
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#d" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </a>
+    <a class="carousel-control-next" href="#d" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </a>
+</div>
+
+
+
+
+
+
+
+
+
+    <section class="container-fluid bg-dark p-5">
+        <div class="container-lg d-flex justify-content-center align-items-center">
+            <a href="./buy.html" class="btn btn-outline-success  col-4 shadow- text-nowrap  rounded-lg d-flex align-items-center justify-content-center px-5 fade show">Buy Now</a>
+        </div>
+    </section>
+
+    
+
+    <script>
+        document.getElementById("navbar-btn").addEventListener("click",()=>{
+            const b = document.querySelector(".my-nav-b");
+            if (b.style.opacity == '1')
+            {
+                b.style.height = '0px';
+                b.style.opacity = '0';
+            }else{
+                b.style.height = '300px';
+                b.style.opacity = '1';
+            }
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

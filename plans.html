@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>plans - MvV</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body{
+            overflow-x: hidden;
+        }
+        .my-nav-b{
+            height: 0px;
+            opacity: 0;
+            transition: all ease 0.4s;
+        }
+        #alert1,#alert2{
+            position: fixed;
+            left: 50%;
+            transform: translate(-50%,0);
+            top: -100%;
+            z-index: 100;
+            transition: all ease 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div id="alert2" class="alert alert-danger col-6 shadow border">
+        <button class="btn close" id="b1">&#x2715;</button>
+        <div class="alert-heading container row">
+            <span class="lead">process not successfully</span>
+            <span class="text-muted">you want to by MvV+ plans.&#x2718;</span>
+        </div>
+    </div>
+    <section class="navbar bg-dark container-fluid">
+        <span class="navbar-bradn text-light user-select-none">MvV</span>
+        <div class="navbar-nav d-none d-md-block">
+            <a href="./home.html" class="text-secondary px-2 text-decoration-none fade show">Home</a>
+            <a href="./buy.html" class="text-secondary px-2 text-decoration-none fade show">Buy</a>
+            <a href="./plans.html" class="text-light px-2 text-decoration-none fade show">MvV+</a>
+        </div>
+        <div id="navbar-btn" class="position-relative d-block d-md-none btn btn-secondary"><span class="text-dark h5">+</span></div>
+    </section>
+    <div class="my-nav-b bg-dark d-flex text-wrap row justify-content-between border-top border-secondary">
+        <a href="./home.html" class="col-12 text-center d-flex align-items-center justify-content-center h6 text-decoration-none text-secondary shadow-sm">Home</a>
+        <a href="./buy.html" class="col-12 text-center d-flex align-items-center justify-content-center h6 text-decoration-none text-secondary shadow-sm">Buy</a>
+        <a href="./plans.html" class="col-12 text-center d-flex align-items-center justify-content-center h6 text-decoration-none text-secondary shadow-sm">MvV+</a>
+    </div>
+
+
+
+
+
+    <section class="my-5">
+        <div class="container-lg row d-flex justify-content-center align-items-center my-4 rounded-lg">
+            <div class="card bg-warning col-4 shadow-lg">
+                <div class="card-body row container-lg row d-flex justify-content-center">
+                    <span class="lead text-dark">gold</span>
+                    <span class="text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam iure aliquam reiciendis natus! Suscipit.</span>
+                    <a onclick="show(2);" role="button" class="btn btn-warning border-black shadow-lg col-10 mt-4">Buy</a>
+                </div>
+            </div>
+        </div>
+        <div class="container-lg row d-flex justify-content-center align-items-center my-4 rounded-lg">
+            <div class="card bg-secondary col-4 shadow-lg">
+                <div class="card-body row container-lg row d-flex justify-content-center">
+                    <span class="lead text-light">platinium</span>
+                    <span class="text-light">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam iure aliquam reiciendis natus! Suscipit.</span>
+                    <a onclick="show(2);" role="button" class="btn btn-secondary border-black shadow-lg col-10 mt-4">Buy</a>
+                </div>
+            </div>
+        </div>
+        <div class="container-lg row d-flex justify-content-center align-items-center my-4 rounded-lg">
+            <div class="card bg-success col-4 shadow-lg">
+                <div class="card-body row container-lg row d-flex justify-content-center">
+                    <span class="lead text-light">gold</span>
+                    <span class="text-light">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam iure aliquam reiciendis natus! Suscipit.</span>
+                    <a onclick="show(2);" role="button" class="btn btn-success border-black shadow-lg col-10 mt-4">Buy</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <script>
+        document.getElementById("navbar-btn").addEventListener("click",()=>{
+            const b = document.querySelector(".my-nav-b");
+            if (b.style.opacity == '1')
+            {
+                b.style.height = '0px';
+                b.style.opacity = '0';
+            }else{
+                b.style.height = '300px';
+                b.style.opacity = '1';
+            }
+        });
+        function add(number){
+            document.getElementById('b1').addEventListener("click",()=>{
+                const a = document.getElementById('alert2');
+                    a.style.top = '-100%';
+            });
+        }
+        function show(number){
+            document.getElementById(`alert${number}`).style.top = '5%';
+        }
+        add(1);
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
